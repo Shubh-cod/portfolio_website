@@ -514,90 +514,145 @@ h2 {
     margin-bottom: var(--spacing-xs);
 }
 
-/* Contact Section Styles */
+/* ==============================
+   CONTACT SECTION
+   ============================== */
 .contact-section {
-    padding: var(--spacing-xl) 0;
-    background-color: white;
+    padding: var(--spacing-xxl) 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f9fafc 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative Background Circle */
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.1), transparent);
+    border-radius: 50%;
+    z-index: 0;
 }
 
 .contact-container {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: var(--spacing-xl);
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    z-index: 1;
 }
 
+/* ==============================
+   CONTACT INFO CARD
+   ============================== */
 .contact-info-card {
-    background-color: var(--primary-color);
-    color: white;
-    padding: var(--spacing-lg);
-    border-radius: 12px;
+    background: linear-gradient(135deg, var(--primary-color), hsl(var(--primary-hsl), 0.85));
+    color: #fff;
+    padding: var(--spacing-xl);
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: var(--spacing-lg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
 }
 
 .contact-item {
     display: flex;
     align-items: center;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
 }
 
 .contact-item i {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 50%;
 }
 
+/* ==============================
+   CONTACT FORM
+   ============================== */
 .contact-form {
-    background: var(--light-bg);
-    padding: var(--spacing-lg);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px hsla(var(--primary-hsl), 0.1);
+    background: #fff;
+    padding: var(--spacing-xl);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-form:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
 }
 
 .form-group label {
     display: block;
     margin-bottom: var(--spacing-xs);
     color: var(--primary-color);
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 0.95rem;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: var(--spacing-sm);
-    border: 2px solid transparent;
-    border-radius: 6px;
-    background: white;
-    transition: border-color var(--transition-fast) ease;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1.8px solid #e0e0e0;
+    border-radius: 8px;
+    background: #fafafa;
+    transition: all var(--transition-fast) ease;
+    font-size: 0.95rem;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
+    background: #fff;
     border-color: var(--secondary-color);
+    box-shadow: 0 0 0 4px hsla(var(--secondary-hsl), 0.15);
 }
 
+/* ==============================
+   SUBMIT BUTTON
+   ============================== */
 .submit-btn {
-    background-color: var(--primary-color);
-    color: white;
+    background: var(--primary-color);
+    color: #fff;
     border: none;
-    padding: var(--spacing-sm) var(--spacing-lg);
-    border-radius: 6px;
+    padding: var(--spacing-md);
+    border-radius: 8px;
     font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
-    transition: all var(--transition-fast) ease;
+    transition: all 0.25s ease;
     width: 100%;
+    box-shadow: 0 4px 10px hsla(var(--primary-hsl), 0.25);
 }
 
 .submit-btn:hover {
-    background-color: hsl(var(--primary-hsl), 0.9);
+    background: hsl(var(--primary-hsl), 0.9);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px hsla(var(--primary-hsl), 0.3);
+    box-shadow: 0 6px 15px hsla(var(--primary-hsl), 0.35);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px hsla(var(--primary-hsl), 0.25);
 }
 
 
