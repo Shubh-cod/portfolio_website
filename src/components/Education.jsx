@@ -6,8 +6,8 @@ const Education = () => {
         <div className="education-grid">
           <div className="education-card">
             <div className="education-image-wrapper">
-              <img src="/images/B20BB039.jpeg" alt="Graduation" className="education-image" />
-              <img src="/images/logo.png" alt="IIT Jodhpur" className="education-logo" />
+              <img src={`${import.meta.env.BASE_URL}images/B20BB039.jpeg`} alt="Graduation" className="education-image" />
+              <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="IIT Jodhpur" className="education-logo" />
             </div>
             <div className="education-content">
               <h3 className="degree">B.Tech in Bioengineering</h3>

@@ -10,7 +10,7 @@ const Experience = () => {
       title: 'Software Engineer',
       company: 'Chat360',
       period: 'Aug 2024 - Present',
-      image: '/images/exp1.jpg',
+      image: `${import.meta.env.BASE_URL}images/exp1.jpg`,
       achievements: [
         { text: '99% reduction in message failures with WeChat retry mechanism', highlight: '99%' },
         { text: '70-80% reduction in live agent inquiries with GenAI chatbot', highlight: '70-80%' },
@@ -30,7 +30,7 @@ const Experience = () => {
       title: 'Software Engineer - Intern',
       company: 'Chat360',
       period: 'May 2024 - Aug 2024',
-      image: '/images/exp2.jpeg',
+      image: `${import.meta.env.BASE_URL}images/exp2.jpeg`,
       achievements: [
         { text: '90% of chatbots use the intent-entity recognition system', highlight: '90%' },
         { text: 'Seamless Shopify order integration for WhatsApp chatbots', highlight: '' },
@@ -46,7 +46,7 @@ const Experience = () => {
       title: 'Business Development - Intern',
       company: 'Skillarena',
       period: 'Jan 2023 - Feb 2023',
-      image: '/images/exp2.jpg',
+      image: `${import.meta.env.BASE_URL}images/exp2.jpg`,
       responsibilities: [
         'Prospected new clients, built relationships, and generated revenue.',
         'Conducted market research and identified potential business opportunities.',

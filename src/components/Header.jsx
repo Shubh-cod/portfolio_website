@@ -22,7 +22,7 @@ const Header = () => {
     <header id="header" className="header">
       <div className="header-content">
         <div className="header-image">
-          <img src="/images/proflie_image.jpeg" alt="Shubh Soni" />
+          <img src={`${import.meta.env.BASE_URL}images/proflie_image.jpeg`} alt="Shubh Soni" />
           <div className="image-glow"></div>
         </div>
         <div className="header-text">

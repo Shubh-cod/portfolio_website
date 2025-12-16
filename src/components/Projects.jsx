@@ -8,7 +8,7 @@ const Projects = () => {
     {
       id: 1,
       title: 'Human Face Emotion Recognition',
-      image: '/images/Seven-basic-human-emotions.png',
+      image: `${import.meta.env.BASE_URL}images/Seven-basic-human-emotions.png`,
       results: [
         { text: '25% improvement in classification accuracy', highlight: '25%' },
         { text: 'Multiple architecture implementations (ResNet, MobileNet)', highlight: '' },
@@ -19,7 +19,7 @@ const Projects = () => {
     {
       id: 2,
       title: 'MultiDock: Python Based Approach',
-      image: '/images/dock.jpg',
+      image: `${import.meta.env.BASE_URL}images/dock.jpg`,
       results: [
         { text: '80% reduction in setup time', highlight: '80%' },
         { text: '5x efficiency boost', highlight: '5x' },
