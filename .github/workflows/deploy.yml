@@ -39,9 +39,9 @@ jobs:
           # - If your site is at: https://username.github.io/repo-name/ → use /repo-name/
           # - If your site is at: https://username.github.io/ → use /
           # Change the line below to match your GitHub Pages URL:
-          # VITE_BASE_PATH: /portfolio_website/
+          VITE_BASE_PATH: /portfolio_website/
           # For root deployment, uncomment the line below and comment the line above:
-          VITE_BASE_PATH: /
+          # VITE_BASE_PATH: /
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
