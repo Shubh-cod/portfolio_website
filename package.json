@@ -1,18 +1,13 @@
 {
-  "homepage": "https://shubhsoni.github.io/portfolio_website",
   "name": "portfolio-website",
   "private": true,
-  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "vite",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "build": "vite build",
-    "build:local": "VITE_BASE_PATH=/ vite build",
     "preview": "vite preview",
-    "preview:local": "npm run build:local && vite preview"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
