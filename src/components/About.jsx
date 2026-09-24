@@ -4,22 +4,28 @@ import { FaCode, FaBrain, FaServer } from 'react-icons/fa'
 const About = () => {
   const [counters, setCounters] = useState({ years: 0 })
   const statsRef = useRef(null)
+  const hasAnimatedRef = useRef(false)
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          animateCounters()
-        }
-      },
-      { threshold: 0.3 }
-    )
-
-    if (statsRef.current) {
-      observer.observe(statsRef.current)
+    const isInView = () => {
+      if (!statsRef.current) return false
+      const rect = statsRef.current.getBoundingClientRect()
+      return rect.top < window.innerHeight && rect.bottom > 0
     }
 
-    return () => observer.disconnect()
+    const checkAndAnimate = () => {
+      if (hasAnimatedRef.current) return
+      if (isInView()) {
+        hasAnimatedRef.current = true
+        animateCounters()
+        window.removeEventListener('scroll', checkAndAnimate)
+      }
+    }
+
+    checkAndAnimate()
+    window.addEventListener('scroll', checkAndAnimate, { passive: true })
+
+    return () => window.removeEventListener('scroll', checkAndAnimate)
   }, [])
 
   const animateCounters = () => {
