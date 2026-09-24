@@ -3,7 +3,7 @@ import { FaCode, FaBrain, FaServer } from 'react-icons/fa'
 
 const About = () => {
   const [counters, setCounters] = useState({ years: 0 })
-  const sectionRef = useRef(null)
+  const statsRef = useRef(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -12,11 +12,11 @@ const About = () => {
           animateCounters()
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     )
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
+    if (statsRef.current) {
+      observer.observe(statsRef.current)
     }
 
     return () => observer.disconnect()
@@ -42,10 +42,10 @@ const About = () => {
   }
 
   return (
-    <section id="about" className="about-section" ref={sectionRef}>
+    <section id="about" className="about-section">
       <div className="container">
         <h2 className="section-title">About Me</h2>
-        <div className="stats-grid">
+        <div className="stats-grid" ref={statsRef}>
           <div className="stat-card">
             <div className="stat-number">{counters.years.toFixed(1)}</div>
             <div className="stat-label">Years Experience</div>
