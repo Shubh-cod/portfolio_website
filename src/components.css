@@ -318,6 +318,8 @@ section {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 0.5rem;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .stat-label {

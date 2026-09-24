@@ -31,11 +31,11 @@ const About = () => {
     const timer = setInterval(() => {
       progress += increment
       if (progress >= 1) {
-        setCounters({ years: 1.5 })
+        setCounters({ years: 2.5 })
         clearInterval(timer)
       } else {
         setCounters({
-          years: 1.5 * progress,
+          years: 2.5 * progress,
         })
       }
     }, duration / steps)
@@ -53,7 +53,7 @@ const About = () => {
         </div>
         <div className="about-content">
           <p className="about-text">
-            I'm Shubh Soni, a Software Engineer and GenAI Lead at Chat360 in Pune, with 1.5+ years of professional experience. I graduated from IIT Jodhpur in May 2024 and have since been focused on building scalable backend systems and leading the deployment of production-grade GenAI infrastructure. My expertise spans server management, AI product deployment, and creating robust solutions that drive real impact in the field of generative AI and backend development.
+            I'm Shubh Soni, a Software Engineer and GenAI Lead at Chat360 in Pune, with 2.5+ years of professional experience. I graduated from IIT Jodhpur in May 2024 and have since been focused on building scalable backend systems and leading the deployment of production-grade GenAI infrastructure. My expertise spans server management, AI product deployment, and creating robust solutions that drive real impact in the field of generative AI and backend development.
           </p>
           <div className="highlights-grid">
             <div className="highlight-card">
