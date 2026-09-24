@@ -19,6 +19,11 @@ const Skills = () => {
     { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
     { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
     { name: 'LangChain', icon: '🔗' },
+    { name: 'FastAPI', icon: '⚡' },
+    { name: 'Kafka', icon: '📨' },
+    { name: 'Temporal', icon: '⏳' },
+    { name: 'MLflow', icon: '📊' },
+    { name: 'FHIR', icon: '🏥' },
   ]
 
   return (

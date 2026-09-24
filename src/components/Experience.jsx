@@ -6,10 +6,28 @@ const Experience = () => {
 
   const experiences = [
     {
+      id: 4,
+      title: 'Software Development Engineer 1 (SDE1)',
+      company: 'Innovaccer',
+      period: 'Jan 2026 - Present',
+      image: `${import.meta.env.BASE_URL}images/radowan-nakif-rehan-cYyqhdbJ9TI-unsplash.jpg`,
+      achievements: [
+        { text: 'Phoenix Award for outstanding contribution', highlight: 'Phoenix Award' },
+        { text: 'Spotlight Award the very next quarter - back-to-back recognition within 9 months', highlight: 'Spotlight Award' },
+      ],
+      responsibilities: [
+        'Led the FHIR data migration for the InJourney platform, restructuring legacy patient and care journey data models to FHIR-compliant schemas.',
+        'Built and scaled the fax processing pipeline end-to-end - including duplicate fax handling, presigned document URL support, and fax-based notification delivery - to enable reliable multi-channel patient outreach.',
+        'Designed Kafka-based event publishing (migrating from Avro to JSON) and Temporal workflow orchestration to improve reliability of care journey execution across the omnichannel platform.',
+        'Integrated GenAI capabilities (OpenAI with MLflow tracing) into the Comet Agent Backend, and added multi-cloud storage support (Azure, GCS, S3) and audit event logging for compliance.',
+      ],
+      tech: ['Python', 'FastAPI', 'FHIR', 'Kafka', 'Temporal', 'MLflow', 'OpenAI', 'PostgreSQL', 'Docker'],
+    },
+    {
       id: 1,
       title: 'Software Engineer',
       company: 'Chat360',
-      period: 'Aug 2024 - Present',
+      period: 'Aug 2024 - Jan 2026',
       image: `${import.meta.env.BASE_URL}images/exp1.jpg`,
       achievements: [
         { text: '99% reduction in message failures with WeChat retry mechanism', highlight: '99%' },
@@ -79,7 +97,7 @@ const Experience = () => {
         </div>
       </div>
 
-      {activeModal && (
+      {activeModal !== null && (
         <>
           <div className="modal-overlay" onClick={() => setActiveModal(null)} />
           <div className="modal">
